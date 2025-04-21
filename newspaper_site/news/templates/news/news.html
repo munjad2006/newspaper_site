@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us - News Portal</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f1f1f1;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 16px;
+            background-color: #fff;
+            text-align: center;
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .card p {
+            color: #555;
+            margin: 0 0 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8e9e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .section::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0px 0;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a href="#">News Portal</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'news' %}">News</a>
+            <a href="{% url 'explain' %}">Explain</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+        <div class="container">
+            <h1>News</h1>
+            <section>
+                <div class="section" id="articlesContainer">
+                    {% for article in articles %}
+                    <div class="card">
+                        <h2>{{ article.title }}</h2>
+                        <p>By {{ article.author }}</p>
+                        <p><strong>Published on:</strong> {{ article.pub_date }}</p>
+                        <a href="{% url 'article_detail' article.id %}">Read More</a>
+                    </div>
+                    {% empty %}
+                    <p>No articles found.</p>
+                    {% endfor %}
+                </div>
+            </section>
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2023 News Portal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
