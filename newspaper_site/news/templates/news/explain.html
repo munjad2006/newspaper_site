@@ -17,6 +17,24 @@
             background-color: #f1f1f1;
         }
 
+        h1 {
+            text-align: center;
+            margin: 0px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        body {
+            background-color: #efefef;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
         nav {
             background-color: #333;
             overflow: hidden;
@@ -38,7 +56,10 @@
 
         main {
             flex: 1;
-            padding: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
         footer {
@@ -46,26 +67,208 @@
             background-color: #f1f1f1;
             padding: 10px;
         }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8e9e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-        <a href="#">News Portal</a>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'news' %}">News</a>
-        <a href="{% url 'explain' %}">Explain</a>
-        <a href="{% url 'contact' %}">Contact</a>
-    </nav>
     <main>
-        <h1>About Our Newspaper</h1>
-        <p>Welcome to News Portal, your trusted source for the latest news on technology, politics, sports, environment,
-            and
-            more.</p>
-        <p>Our team is dedicated to bringing you up-to-date and accurate news from around the globe.</p>
-        <p>Stay informed, stay empowered.</p>
-        <button onclick="window.location.href='/'">← Back to Home</button>
+        <nav>
+            <a href="#">News Portal</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'news' %}">News</a>
+            <a href="{% url 'explain' %}">Explain</a>
+            <a href="{% url 'career' %}">Career</a>
+            <a href="{% url 'contribute' %}">Contribute</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+        <div class="container">
+            <h1>Explained NEWS</h1>
+            <h2>1. Global Economic Growth Slows Amid Escalating Trade Tensions</h2>
+
+            <p style="font-size: large;"><b>Author:</b> Reuters Staff </p>
+            <p style="font-size: large;"><b>Published:</b> April 16, 2025</p>
+            <p style="font-size: large;"><b>Source:</b> <a
+                    href="https://www.reuters.com/markets/global-economic-growth-could-slow-23-due-trade-tensions-says-un-trade-agency-2025-04-16/"
+                    target="_blank">Reuters</a></p>
+            <hr>
+            <p style="font-size: large;">
+                The United Nations Conference on Trade and Development (UNCTAD) has projected a significant slowdown in
+                global economic growth, forecasting a deceleration to 2.3% in 2025 from 2.8% in 2024. This downturn is
+                attributed to escalating trade tensions and rising policy uncertainties, particularly stemming from
+                recent U.S. tariff policies. Earlier in April, U.S. President Donald Trump announced sweeping tariffs on
+                numerous countries, including imposing a 145% levy on Chinese imports. These measures have unsettled
+                financial markets and raised concerns about a potential U.S. recession. UNCTAD warns that continued
+                restrictive trade practices and geopolitical economic confrontations could disrupt international trade
+                flows and supply chains, further dampening global economic activity. The agency also urged the U.S.
+                administration to exempt the poorest and smallest economies from tariffs, arguing they have minimal
+                effect on U.S. trade objectives.</p>
+
+            <p style="font-size: large;">The report highlights that the global economy is already facing challenges from
+                rising inflation, high energy prices, and the lingering effects of the COVID-19 pandemic. UNCTAD's
+                Secretary-General, Rebeca Grynspan, emphasized the need for a coordinated global response to address
+                these challenges and promote sustainable economic growth.</p>
+
+            <p style="font-size: large;">The report also notes that the global economy is projected to grow by 2.3% in
+                2025, down from the previous forecast of 2.8%. This slowdown is expected to be driven by a combination
+                of factors, including rising inflation, high energy prices, and the lingering effects of the COVID-19
+                pandemic.</p>
+
+            <p style="font-size: large;">UNCTAD's report highlights the need for a coordinated global response to
+                address
+                these challenges and promote sustainable economic growth. The agency also calls for increased
+                investment in infrastructure, education, and technology to support long-term growth.</p>
+
+            <p style="font-size: large;">In conclusion, the UNCTAD report underscores the importance of addressing trade
+                tensions and policy uncertainties to ensure a stable and sustainable global economic environment. The
+                agency's recommendations for increased investment in infrastructure, education, and technology are
+                crucial for promoting long-term growth and resilience in the face of ongoing challenges.</p>
+
+            <p style="font-size: large;">For more information, please visit the <a href="https://unctad.org/"
+                    target="_blank">UNCTAD
+                    website</a>.</p>
+
+            <hr>
+
+            <h2>2. U.S. Stock Markets Tumble After New Export Restrictions on China</h2>
+
+            <p style="font-size: large;"><b>Author:</b> Graeme Wearden </p>
+            <p style="font-size: large;"><b>Published:</b> April 16, 2025</p>
+            <p style="font-size: large;"><b>Source:</b> <a
+                    href="https://www.theguardian.com/business/live/2025/apr/16/asian-shares-gold-nvidia-stock-price-uk-inflation-slows-business-live"
+                    target="_blank"> The Guardian</a>​</p>
+            <hr>
+            <p style="font-size: large;">
+                Global financial markets experienced turmoil following U.S. President Donald Trump’s tightened export
+                restrictions on chips to China, causing sharp declines in global stocks and the U.S. dollar. Nvidia
+                revealed it anticipates a $5.5 billion loss due to the ban on its AI chips in China. The World Trade
+                Organization (WTO) warned that the tariffs could reverse global trade growth, lowering its forecast from
+                +2.7% to a -0.2% decline.</p>
+
+            <p style="font-size: large;">In response, stock markets across the U.S., Europe, and Asia dropped, with
+                Nvidia's shares falling 6.5%. The dollar weakened, while gold surged to a record high above $3,300 an
+                ounce amid growing investor uncertainty. The UN also forecast slower global economic growth of just 2.3%
+                in 2025.</p>
+
+            <p style="font-size: large;">Meanwhile, UK inflation cooled to 2.6%, and eurozone inflation to 2.2%,
+                encouraging expectations of interest rate cuts by the Bank of England and the European Central Bank.
+                However, economists warned inflation could rise again due to new tariffs and rising household costs.</p>
+
+            <p style="font-size: large;">In response to U.S. tariffs, China criticized U.S. trade practices and
+                appointed a new trade negotiator. Additional economic data revealed a U.S. retail sales spike in March,
+                but a decline in industrial production. Elsewhere, Spotify suffered a major service outage, and water
+                pollution incidents in the UK rose sharply in 2024.</p>
+
+            <p style="font-size: large;">In conclusion, the tightening of export restrictions on China has led to a
+                significant decline in global stock markets and the U.S. dollar, with Nvidia facing substantial losses.
+                The WTO's warning of a potential reversal in global trade growth adds to the uncertainty. As markets
+                react to these developments, investors are advised to stay informed and consider the potential impact on
+                their portfolios.</p>
+
+            <p style="font-size: large;">For more information, please visit the <a href="https://www.wto.org/"
+                    target="_blank"> WTO website</a>.</p>
+
+            <hr>
+
+            <h2>3. Climate Change Leads to 41 Additional Days of Extreme Heat in 2024</h2>
+
+            <p style="font-size: large;"><b>Author:</b> Press Trust of India </p>
+            <p style="font-size: large;"><b>Published:</b> December 27, 2024</p>
+            <p style="font-size: large;"><b>Source:</b> <a
+                    href="https://www.business-standard.com/world-news/climate-change-led-to-41-additional-days-of-extreme-heat-in-2024-report-124122700312_1.html"
+                    target="_blank"> Business Standard</a>​</p>
+            <hr>
+            <p style="font-size: large;">
+                A recent report by the World Meteorological Organization (WMO) revealed that climate change has caused
+                an
+                additional 41 days of extreme heat in 2024, with the average global temperature reaching 1.4 degrees
+                Celsius above pre-industrial levels. The report highlights the urgent need for action to combat climate
+                change and its devastating effects on the planet.</p>
+            <p style="font-size: large;">The WMO's report emphasizes that the increase in extreme heat days is a direct
+                result of human-induced climate change, which has led to more frequent and severe heatwaves across the
+                globe. The report also notes that the Arctic region has experienced particularly severe warming, with
+                temperatures rising by 3 degrees Celsius above pre-industrial levels.</p>
+            <p style="font-size: large;">The report calls for immediate action to reduce greenhouse gas emissions and
+                limit global warming to 1.5 degrees Celsius, as outlined in the Paris Agreement. The WMO urges countries
+                to accelerate their efforts to transition to renewable energy sources and implement sustainable
+                practices
+                to mitigate the impacts of climate change.</p>
+            <p style="font-size: large;">In conclusion, the WMO's report serves as a stark reminder of the urgent need
+                to
+                address climate change and its consequences. The additional 41 days of extreme heat in 2024 highlight
+                the
+                pressing need for global cooperation and action to combat this critical issue.</p>
+            <p style="font-size: large;">For more information, please visit the <a href="https://www.wmo.int/"
+                    target="_blank"> WMO website</a>.</p>
+
+            <hr>
+
+            <h2>4. Expo 2025 Osaka: Showcasing Innovations for a Sustainable Future</h2>
+            <p style="font-size: large;"><b>Author:</b> World Insights Staff </p>
+            <p style="font-size: large;"><b>Published:</b> April 13, 2025</p>
+            <p style="font-size: large;"><b>Source:</b> <a
+                    href="https://www.worldinsights.com/expo-2025-osaka-showcasing-innovations-for-a-sustainable-future/"
+                    target="_blank"> World Insights</a>​</p>
+            <hr>
+            <p style="font-size: large;">
+                Expo 2025 Osaka is set to be a groundbreaking event, showcasing innovations and technologies that aim to
+                address global challenges and promote a sustainable future. The theme of the expo, "Designing Future
+                Society for Our Lives," reflects the commitment to creating a better world through collaboration and
+                innovation.</p>
+            <p style="font-size: large;">The expo will feature pavilions from over 150 countries, each highlighting
+                their
+                unique contributions to sustainability and innovation. Visitors can expect to see cutting-edge
+                technologies, interactive exhibits, and discussions on pressing global issues such as climate change,
+                health, and social equity.</p>
+            <p style="font-size: large;">In addition to showcasing innovations, Expo 2025 Osaka aims to foster global
+                collaboration and dialogue. The event will host a series of forums and conferences, bringing together
+                leaders from various sectors to discuss solutions to global challenges.</p>
+            <p style="font-size: large;">The expo is expected to attract millions of visitors from around the world,
+                providing a platform for cultural exchange and collaboration. It will also serve as an opportunity for
+                countries to showcase their advancements in technology and sustainability.</p>
+            <p style="font-size: large;">In conclusion, Expo 2025 Osaka promises to be a landmark event, highlighting
+                the
+                importance of innovation and collaboration in addressing global challenges. The expo's focus on
+                sustainability and the future of society aligns with the urgent need for action to create a better world
+                for future generations.</p>
+            <p style="font-size: large;">For more information, please visit the <a href="https://www.expo2025.or.jp/"
+                    target="_blank"> Expo 2025 Osaka website</a>.</p>
+
+            <hr>
+            <p style="font-size: larger;">thanks for reading this article. For more information, please visit the <a
+                    href="https://www.yournews.com/" target="_blank"> Your News website</a>.</p>
+            <div class="section">
+                <h2>Our Team</h2>
+                <p style="font-size: large;">Our newsroom is made up of experienced journalists, editors, photographers,
+                    and contributors who are
+                    passionate about storytelling and committed to public service journalism.</p>
+            </div>
+
+            <div class="section contact">
+                <h2>Contact Us</h2>
+                <p style="font-size: large;"><strong>Email:</strong> <a
+                        href="mailto:contact@yournews.com">contact@yournews.com</a></p>
+                <p style="font-size: large;"><strong>Phone:</strong> +91-XXXX-XXXXXX</p>
+                <p style="font-size: large;"><strong>Address:</strong> Your Office Address, City, Country</p>
+            </div>
+
+            <div class="section">
+                <h2>Join Us</h2>
+                <p style="font-size: large;">Interested in a career in journalism? Check out our <a
+                        href="{% url 'career' %}">Careers</a>
+                    or <a href="#">Contributor
+                        Program</a> to become a part of our growing team.</p>
+            </div>
+        </div>
     </main>
     <footer>
         <hr>

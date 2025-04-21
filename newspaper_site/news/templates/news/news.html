@@ -112,6 +112,19 @@
             margin: 0px 0;
             padding-bottom: 20px;
         }
+
+        .search-bar {
+            margin: 5px auto;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 40%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
@@ -123,7 +136,12 @@
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'news' %}">News</a>
             <a href="{% url 'explain' %}">Explain</a>
+            <a href="{% url 'career' %}">Career</a>
+            <a href="{% url 'contribute' %}">Contribute</a>
             <a href="{% url 'contact' %}">Contact</a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="filterArticles()">
+            </div>
         </nav>
         <div class="container">
             <h1>News</h1>
@@ -146,6 +164,44 @@
         <hr>
         <p>&copy; 2023 News Portal. All rights reserved.</p>
     </footer>
+
+    <script>
+        function filterArticles() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const articlesContainer = document.getElementById('articlesContainer');
+            const cards = articlesContainer.getElementsByClassName('card');
+            let hasVisibleArticles = false;
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h2')[0];
+                if (title) {
+                    const textValue = title.textContent || title.innerText;
+                    if (textValue.toLowerCase().indexOf(filter) > -1) {
+                        cards[i].style.display = 'block'; // Show matching card
+                        hasVisibleArticles = true;
+                    } else {
+                        cards[i].style.display = 'none'; // Hide non-matching cards
+                    }
+                }
+            }
+
+            // Display "No articles found" message if no articles are visible
+            let noArticlesMessage = document.getElementById('noArticlesMessage');
+            if (!hasVisibleArticles) {
+                if (!noArticlesMessage) {
+                    noArticlesMessage = document.createElement('p');
+                    noArticlesMessage.id = 'noArticlesMessage';
+                    noArticlesMessage.textContent = 'No articles found.';
+                    noArticlesMessage.style.textAlign = 'center';
+                    articlesContainer.appendChild(noArticlesMessage);
+                }
+            } else if (noArticlesMessage) {
+                noArticlesMessage.remove();
+            }
+        }
+    </script>
+
 </body>
 
 </html>

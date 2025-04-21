@@ -126,7 +126,7 @@
         }
 
         .search-bar input {
-            width: 50%;
+            width: 40%;
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
@@ -153,6 +153,8 @@
             <a href="{% url 'about' %}">About</a>
             <a href="{% url 'news' %}">News</a>
             <a href="{% url 'explain' %}">Explain</a>
+            <a href="{% url 'career' %}">Career</a>
+            <a href="{% url 'contribute' %}">Contribute</a>
             <a href="{% url 'contact' %}">Contact</a>
             <div class="search-bar">
                 <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="filterArticles()">
@@ -262,6 +264,7 @@
             const filter = input.value.toLowerCase();
             const articlesContainer = document.getElementById('articlesContainer');
             const cards = articlesContainer.getElementsByClassName('card');
+            let hasVisibleArticles = false;
 
             for (let i = 0; i < cards.length; i++) {
                 const title = cards[i].getElementsByTagName('h2')[0];
@@ -269,10 +272,25 @@
                     const textValue = title.textContent || title.innerText;
                     if (textValue.toLowerCase().indexOf(filter) > -1) {
                         cards[i].style.display = '';
+                        hasVisibleArticles = true;
                     } else {
                         cards[i].style.display = 'none';
                     }
                 }
+            }
+
+            // Display "No articles found" message if no articles are visible
+            let noArticlesMessage = document.getElementById('noArticlesMessage');
+            if (!hasVisibleArticles) {
+                if (!noArticlesMessage) {
+                    noArticlesMessage = document.createElement('p');
+                    noArticlesMessage.id = 'noArticlesMessage';
+                    noArticlesMessage.textContent = 'No articles found.';
+                    noArticlesMessage.style.textAlign = 'center';
+                    articlesContainer.appendChild(noArticlesMessage);
+                }
+            } else if (noArticlesMessage) {
+                noArticlesMessage.remove();
             }
         }
     </script>

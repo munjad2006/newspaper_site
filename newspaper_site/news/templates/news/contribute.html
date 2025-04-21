@@ -89,7 +89,8 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
+            /* Increased from 1100px to 1200px */
             margin: 0 auto;
             padding: 20px;
             background-color: #f8e9e9;
@@ -113,23 +114,26 @@
             <a href="{% url 'contact' %}">Contact</a>
         </nav>
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>If you have any questions or feedback, please fill out the form below:</p>
-            <form method="post" action="{% url 'contact' %}">
+            <h1>Contribute an Article</h1>
+            <p>Share your article details below:</p>
+            <form method="post" action="{% url 'contribute' %}">
                 {% csrf_token %}
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="title">Article Title:</label>
+                <input type="text" id="title" name="title" required>
 
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="author">Author Name:</label>
+                <input type="text" id="author" name="name" required>
 
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="publish_date">Publish Date:</label>
+                <input type="date" id="publish_date" name="publish_date" required>
 
-                <button type="submit">Send Message</button>
+                <label for="explanation">Explanation:</label>
+                <textarea id="explanation" name="explanation" rows="5" required></textarea>
+
+                <button type="submit">Submit Article</button>
             </form>
+        </div>
     </main>
-    </div>
     <footer>
         <hr>
         <p>&copy; 2023 News Portal. All rights reserved.</p>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us - News Portal</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0px 0;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        body {
+            background-color: #efefef;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            flex: 1;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8e9e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .font-size {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <main>
+        <nav>
+            <a href="#">News Portal</a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'news' %}">News</a>
+            <a href="{% url 'explain' %}">Explain</a>
+            <a href="{% url 'career' %}">Career</a>
+            <a href="{% url 'contribute' %}">Contribute</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+        <div class="container">
+            <header>
+                <h1>Careers at Your News Portal</h1>
+                <p class="font-size">Interested in a career in journalism? You're in the right place.</p>
+            </header>
+            <h2>🌟 Join Our Team!</h2>
+            <p class="font-size">At Your News Website, we believe in the power of storytelling. We are on the lookout
+                for passionate
+                individuals who want to make a difference through journalism.</p>
+            <p class="font-size">Whether you’re a seasoned journalist or just starting out, we welcome diverse voices
+                and fresh
+                perspectives.</p>
+            <p class="font-size">We cover everything from breaking news to in-depth features, and we want you to be part
+                of our
+                journey.</p>
+            <p class="font-size">Our newsroom is a vibrant space where creativity meets integrity, and we are committed
+                to fostering
+                an inclusive environment.</p>
+            <p class="font-size">If you have a knack for storytelling, a passion for current events, and a desire to
+                make an impact,
+                we want to hear from you!</p>
+            <p class="font-size">We are committed to diversity and inclusion in our hiring practices. We encourage
+                applications from
+                all backgrounds, experiences, and perspectives.</p>
+            <p class="font-size">Join us in our mission to inform, engage, and inspire our audience.</p>
+            <section>
+                <h2>🔍 What We Look For</h2>
+                <ul>
+                    <li class="font-size"><strong>Journalistic Passion:</strong> A drive to uncover the truth and tell
+                        compelling,
+                        accurate stories.</li>
+                    <li class="font-size"><strong>Creativity & Curiosity:</strong> Whether it’s political reporting or
+                        pop culture, we
+                        love fresh angles.</li>
+                    <li class="font-size"><strong>Digital Fluency:</strong> From social media strategy to multimedia
+                        journalism, the
+                        digital world is your playground.</li>
+                    <li class="font-size"><strong>Ethical Standards:</strong> Commitment to fairness, accuracy, and
+                        responsible
+                        reporting.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🧑‍💻 Opportunities</h2>
+                <ul>
+                    <li class="font-size">News Reporter (Local & International)</li>
+                    <li class="font-size">Video Journalist / Multimedia Editor</li>
+                    <li class="font-size">Fact-checker / Research Analyst</li>
+                    <li class="font-size">Copy Editor / Sub-editor</li>
+                    <li class="font-size">Social Media Content Manager</li>
+                    <li class="font-size">Internships for Journalism Students</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🚀 Why Join Us?</h2>
+                <ul>
+                    <li class="font-size">Be part of a team shaping tomorrow’s conversations.</li>
+                    <li class="font-size">Work with seasoned editors, mentors, and creatives.</li>
+                    <li class="font-size">Competitive pay, flexible roles, and hybrid work options.</li>
+                    <li class="font-size">Opportunity to publish your work across platforms.</li>
+                    <li class="font-size">Chance to attend global events, press meets, and summits.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>📬 How to Apply</h2>
+                <p class="font-size">Send your resume, portfolio (if any), and a short pitch or sample article to:</p>
+                <p class="font-size">
+                    <a href="mailto:careers@yourwebsite.com" class="email">careers@yourwebsite.com</a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

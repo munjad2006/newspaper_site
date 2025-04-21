@@ -8,3 +8,15 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class ContactForm(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    message = models.TextField()
+
+class ContributeForm(models.Model):
+    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    Explanation = models.TextField()
